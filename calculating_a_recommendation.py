@@ -68,6 +68,7 @@ def calculating_a_recommendation(
             result_rate = float(decimal.Decimal(result_rate))
 
             result = symptom_score * result_rate
+            print(result)
             if 0 < result <= 50:
                 return data.result['some_problems']
             else:
