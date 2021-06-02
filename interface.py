@@ -1,5 +1,5 @@
 import data
-from calculating_a_recommendation import calculating_a_recommendation
+from calculating.recommendation import calculating_a_recommendation
 
 
 def interface():
@@ -57,7 +57,7 @@ def interface():
     if 'Висока температура тіла' in main_symptoms:
         print('Яка у Вас температура тіла?')
         for index, temp in enumerate(data.body_temperature.keys()):
-            print(f'{index}) {temp}')
+            print(f'{index + 1}) {temp}')
         user_chose = int(input())
         body_temperature = list(data.body_temperature.keys())[user_chose - 1]
 
